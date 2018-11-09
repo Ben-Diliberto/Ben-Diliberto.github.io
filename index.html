@@ -19,7 +19,6 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#experience" data-scroll>Experience</a></li>
                     <li><a href="#education" data-scroll>Education</a></li>
-                    <li><a id="logout">Logout</a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="sidenav">
@@ -271,11 +270,6 @@
     <script>
         AOS.init();
 
-        var cookie = document.cookie;
-        if (cookie == "") {
-            window.location = "/login.html";
-        }
-
         $(document).ready(function() {
             $('.fixed-action-btn').floatingActionButton();
             $('.tooltipped').tooltip();
@@ -295,11 +289,6 @@
                 }, 500);
             }
             $('[data-scroll]').on('click', scrollToSection);
-
-            $('#logout').on('click', function() {
-                document.cookie = "";
-                window.location = "/login.html";
-            })
         }(jQuery));
     </script>
 
