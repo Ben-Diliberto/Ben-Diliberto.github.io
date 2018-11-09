@@ -1,5 +1,14 @@
-<!DOCTYPE html>
+<?php
+
+session_start(); /* Starts the session */
+if(!isset($_SESSION['UserData']['Username'])){
+    header("location:login.php");
+    exit;
+}
+
+?>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -290,7 +299,9 @@
             }
             $('[data-scroll]').on('click', scrollToSection);
         }(jQuery));
+
     </script>
 
 </body>
+
 </html>
