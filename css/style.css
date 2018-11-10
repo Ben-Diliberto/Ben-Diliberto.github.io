@@ -66,3 +66,7 @@ footer.page-footer {
 .fill-screen {
     height: 95vh;
 }
+
+.center-text {
+    text-align: center;
+}
